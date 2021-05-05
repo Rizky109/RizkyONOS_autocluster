@@ -227,7 +227,7 @@ create_onos(){
           --net $netName \
           --ip $currentIp \
           --publish 818$i:8181 \
-          -e ONOS_APPS="drivers,openflow-base,netcfghostprovider,lldpprovider,gui2" \
+          -e ONOS_APPS="drivers,openflow-base,netcfghostprovider,lldpprovider,hostprovider,gui2" \
           onosproject/onos:$onosVersion >/dev/null
 
         goodIP=$currentIp
