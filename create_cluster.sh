@@ -7,10 +7,10 @@ netName="onos-cluster-net"
 creatorKey="creator"
 creatorValue="onos-cluster-create"
 
-atomixVersion="3.1.5"
-onosVersion="2.2.1"
-atomixNum=3
-onosNum=3
+atomixVersion="3.1.9"
+onosVersion="2.5.1"
+atomixNum=2
+onosNum=2
 
 customSubnet=172.20.0.0/16
 customGateway=172.20.0.1
@@ -227,6 +227,7 @@ create_onos(){
           --net $netName \
           --ip $currentIp \
           --publish 818$i:8181 \
+	  --publish 810$i:8101 \
           -e ONOS_APPS="drivers,openflow-base,netcfghostprovider,lldpprovider,hostprovider,proxyarp,gui2" \
           onosproject/onos:$onosVersion >/dev/null
 
