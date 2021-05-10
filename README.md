@@ -11,5 +11,18 @@ This script is intended to automatically deploy an ONOS cluster, a fork from ori
 - Create ONOS cluster (by default 2 instances) `./create_cluster.sh`
 - Set sshkey and env parameters `./set_env_sshkey.sh`
 
-## Testing
-- Use the example and the ONOS instances `sudo python3 mytopo.py $ONOS_INSTANCES`
+## Testing (with an example mytopo.py)
+> mytopo.py consists of 6 switches and 6 hosts
+- Go to directory `cd ONOS_autocluster`
+- Run the onos-netfcg `onos-netcfg $OC1 mytopo.json`
+> setting the label name of the switches and hosts in ONOS
+- Run the example `sudo python3 mytopo.py $ONOS_INSTANCES`
+- In the mininet shell `pingall` or `h1 ping h5`
+> run the topology and connected all switches to the two ONOS Instances
+> in the pingall and ping command does not can activate apps in ONOS or do some steps with host-to-host intent from ONOS GUI
+- On the other terminal, run `onos`
+> it will direct you to ONOS CLI, you can just press TAB to see other command completion
+- You may activate the necessary ONOS app, `app activate fwd` or 
+- checking paths between two switches `paths --disjoint of:0000000000000001 of:0000000000000003`
+- Go to ONOS GUI with your web browser to open http://[your_ip_address or localhost]:8181/onos/ui
+
