@@ -1,6 +1,8 @@
 # ONOS_autocluster
 This script is intended to automatically deploy an ONOS cluster, a fork from original work by ederollora/ONOS_autocluster
-![Image](ONOS_with_mytopo.jpg)
+
+<img src="ONOS_with_mytopo.jpg" width="640">
+
 
 ## Prerequisite (you may skip it if already installed)
 - Docker engine installed on your Ubuntu server with a non-user privileges to access all docker commands, use this [link](https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script)
