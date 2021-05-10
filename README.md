@@ -10,6 +10,8 @@ This script is intended to automatically deploy an ONOS cluster, a fork from ori
 
 ## Steps to do
 - Run `git clone https://github.com/abazh/ONOS_autocluster.git`
+> You may encounter problem when running the script if jq and python2 is not install on your server
+> Just install the dependencies sudo apt install jq python-is-python2
 - Go the directory `cd ONOS_autocluster`
 - Create ONOS cluster (by default 2 instances) `./create_cluster.sh`
 - Set sshkey and env parameters `./set_env_sshkey.sh`
